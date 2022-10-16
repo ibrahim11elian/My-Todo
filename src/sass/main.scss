@@ -237,9 +237,7 @@ body {
     cursor: pointer;
 }
 
-.filter .btn:hover {
-    color: var(--clr-todo-text);
-}
+
 
 .btn.active{
     color: $active-clr;
@@ -252,6 +250,13 @@ body {
     -moz-border-radius: $border-radius;
     -ms-border-radius: $border-radius;
     -o-border-radius: $border-radius;
+}
+
+// to work properly on mobile phone and not override the active state color 
+@media (hover: hover) {
+    .filter .btn:hover {
+        color: var(--clr-todo-text);
+    }
 }
 
 /* Large devices (desktops, less than 1200px) */

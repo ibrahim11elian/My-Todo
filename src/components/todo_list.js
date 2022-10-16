@@ -22,6 +22,7 @@ function TodoList({
           );
         })}
       </div>
+
       {window.innerWidth > 575.98 ? (
         <div className="operations-bar">
           <span className="item-count">{todoList.length} items left</span>
@@ -34,9 +35,11 @@ function TodoList({
         <>
           <div className="operations-bar">
             <span className="item-count">{todoList.length} items left</span>
-            <button className="btn clear">clear completed</button>
+            <button className="btn clear" onClick={removeCompleted}>
+              clear completed
+            </button>
           </div>
-          <FilterButtons />
+          <FilterButtons filter={filter} />
         </>
       )}
     </div>
