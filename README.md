@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here](https://your-solution-url.com)
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/todo-app-lightdark-theme-7Tql3CDQ7o)
 - Live Site URL: [Click here](https://my-todo-real.netlify.app/)
 
 ## My process
