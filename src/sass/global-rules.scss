@@ -1,0 +1,15 @@
+// global variables
+
+$rotate-icon: rotate(360deg);
+$transition: 1s;
+$header-clr: rgba(255, 255, 255, 0.922);
+$border-radius: 5px;
+$padding-form: 0 1rem;
+$todo-hight: 3rem;
+$checkbox-color: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+$active-clr:hsl(220, 98%, 61%);
+
+
+* {
+    font-size: 18px;
+}

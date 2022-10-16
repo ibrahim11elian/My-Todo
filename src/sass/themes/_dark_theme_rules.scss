@@ -1,0 +1,14 @@
+
+[theme="dark"] {
+    --clr-background: hsl(235, 21%, 11%);
+    --clr-background-todo: hsl(235, 24%, 19%);
+    --clr-border:hsl(233, 14%, 35%);
+    --clr-placeholder: hsl(234, 11%, 52%);
+    --clr-caret: hsl(236, 33%, 92%);
+    --clr-text:hsl(234, 39%, 85%);
+    --clr-todo-text: hsl(234, 39%, 85%);
+    --clr-completed: hsl(235, 19%, 35%);
+    --shadow: 0px 20px 20px 9px #1b1b1b14;
+    --bg-image-desktop: url("../../images/bg-desktop-dark.jpg");
+    --bg-image-mobile: url("../../images/bg-mobile-dark.jpg")
+}

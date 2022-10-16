@@ -1,0 +1,302 @@
+// dark theme rules
+@use "./themes/dark_theme_rules" as *;
+
+// light theme rules
+@use "./themes/light_theme_rules" as *;
+
+// global rules
+@use "./global-rules.scss" as *;
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.app {
+    background-image: var(--bg-image-desktop);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-color: var(--clr-background);
+    min-height: 100vh;
+    max-height: fit-content;
+}
+
+.container{
+    width:40vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.header{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $header-clr;
+}
+
+.header .title{
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    user-select: none;
+}
+
+.header .svg-inline--fa{
+    font-size: 2rem;
+}
+
+.fa-sun{
+    transform: $rotate-icon;
+    -webkit-transform: $rotate-icon;
+    -moz-transform: $rotate-icon;
+    -ms-transform: $rotate-icon;
+    -o-transform: $rotate-icon;
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+}
+
+.todo-item{
+    height: $todo-hight;
+    background-color: var(--clr-background-todo);
+        border-radius: $border-radius;
+        -webkit-border-radius: $border-radius;
+        -moz-border-radius: $border-radius;
+        -ms-border-radius: $border-radius;
+        -o-border-radius: $border-radius;
+        padding: $padding-form;
+}
+
+.todo-item#input{
+    margin-bottom: 1rem;
+}
+
+.item-container{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: inherit;
+}
+
+.checkbox{
+    appearance: none;
+    border: 2px solid var(--clr-border);
+    background-color: inherit;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.todo-text{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    height: inherit;
+    width: 90%;
+    caret-color: var(--clr-caret);
+    padding-top: .2rem;
+    color: var(--clr-text);
+}
+.todo-text::placeholder{
+    color: var(--clr-placeholder);
+}
+
+.item-div.todo-text{
+    padding-top: 2rem;
+    cursor: pointer;
+}
+
+.item.todo-item{
+    border-radius: unset;
+    -webkit-border-radius: unset;
+    -moz-border-radius: unset;
+    -ms-border-radius: unset;
+    -o-border-radius: unset;
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.item.todo-item:first-child{
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+}
+
+
+.check{
+    padding-top: .4rem;
+    position: relative;
+}
+
+.item-div.todo-text{
+    color: var(--clr-todo-text);
+}
+
+.check .checked{
+    color: white;
+    font-size: .6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    display: none;
+}
+
+.check .checkbox{
+    cursor: pointer;
+}
+
+.check .checkbox:hover{
+    border-color: var(--clr-caret);
+}
+
+.check .checkbox:checked{
+    background-image: $checkbox-color;
+    border: none;
+}
+.check .checkbox:checked + .checked{
+    display: block;
+}
+
+.completed{
+    text-decoration: line-through var(--clr-placeholder) 1px;
+}
+
+.completed .item-div.todo-text{
+    color: var(--clr-completed);
+}
+
+.btn{
+    background: transparent;
+    border: none;
+}
+
+.btn-delete-todo{
+    padding-top: .2rem;
+    color: var(--clr-todo-text);
+    display: none;
+    cursor: pointer;
+}
+
+.item-container:hover > .btn-delete-todo{
+    display: block;
+}
+
+.operations-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--clr-background-todo);
+    height: 3rem;
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+}
+
+.operations-bar .item-count,.operations-bar .clear{
+    font-size: .8rem;
+    color: var(--clr-placeholder);
+}
+
+.clear {
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.clear:hover{
+    color: var(--clr-todo-text);
+}
+
+.filter{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--clr-background-todo);
+    height: 3rem;
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+}
+
+.filter .btn {
+    text-transform: capitalize;
+    font-size: .8rem;
+    color: var(--clr-placeholder);
+    cursor: pointer;
+}
+
+.filter .btn:hover {
+    color: var(--clr-todo-text);
+}
+
+.btn.active{
+    color: $active-clr;
+}
+
+.todo-container{
+    box-shadow: var(--shadow);
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .container {
+        width: 50vw;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .container {
+        width: 60vw;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .container {
+        width: 70vw;
+    }
+    .btn-delete-todo {
+        display: block;
+    }
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container{
+        width: 90vw;
+    }
+    .app {
+        background-image: var(--bg-image-mobile);
+    }
+    .todo-container{
+        box-shadow: none;
+    }
+    .operations-bar {
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow);
+        padding: $padding-form;
+        justify-content: space-between;
+    }
+    .filter{
+        box-shadow: var(--shadow);
+    }
+}
