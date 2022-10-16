@@ -1,5 +1,4 @@
 // global variables
-
 $rotate-icon: rotate(360deg);
 $transition: 1s;
 $header-clr: rgba(255, 255, 255, 0.922);
@@ -9,7 +8,11 @@ $todo-hight: 3rem;
 $checkbox-color: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
 $active-clr:hsl(220, 98%, 61%);
 
-
+// global rules
 * {
     font-size: 18px;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
 }

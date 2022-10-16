@@ -1,6 +1,7 @@
 import React from "react";
 import Todo from "./todo";
 
+// for listing the todo list that comes from local storage
 function TodoList({
   todoList,
   removeTodo,
@@ -23,6 +24,7 @@ function TodoList({
         })}
       </div>
 
+      {/* for checking the width of the device window as its different structure */}
       {window.innerWidth > 575.98 ? (
         <div className="operations-bar">
           <span className="item-count">{todoList.length} items left</span>
@@ -46,6 +48,7 @@ function TodoList({
   );
 }
 
+// component for filtering buttons all, active, completed
 const FilterButtons = ({ filter }) => {
   return (
     <>

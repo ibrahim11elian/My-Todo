@@ -7,10 +7,7 @@
 // global rules
 @use "./global-rules.scss" as *;
 
-body {
-    font-family: "Josefin Sans", sans-serif;
-}
-
+// app general styles
 .app {
     background-image: var(--bg-image-desktop);
     background-repeat: no-repeat;
@@ -29,6 +26,7 @@ body {
     padding-top: 2rem;
 }
 
+// start header styles 
 .header{
     width: inherit;
     display: flex;
@@ -106,10 +104,14 @@ body {
     padding-top: .2rem;
     color: var(--clr-text);
 }
+
 .todo-text::placeholder{
     color: var(--clr-placeholder);
 }
 
+// end header styles
+
+// start todo list styles
 .item-div.todo-text{
     padding: 1rem 0;
     cursor: pointer;
@@ -222,7 +224,19 @@ body {
     color: var(--clr-todo-text);
 }
 
-.filter{
+.todo-container{
+    box-shadow: var(--shadow);
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+}
+
+// end todo list styles 
+
+// start filter section styles
+.filter {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -241,20 +255,10 @@ body {
     color: var(--clr-placeholder);
     cursor: pointer;
 }
+// end filter section styles
 
-
-
-.btn.active{
+.btn.active {
     color: $active-clr;
-}
-
-.todo-container{
-    box-shadow: var(--shadow);
-    border-radius: $border-radius;
-    -webkit-border-radius: $border-radius;
-    -moz-border-radius: $border-radius;
-    -ms-border-radius: $border-radius;
-    -o-border-radius: $border-radius;
 }
 
 // to work properly on mobile phone and not override the active state color 
@@ -263,6 +267,8 @@ body {
         color: var(--clr-todo-text);
     }
 }
+
+// responsiveness
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {

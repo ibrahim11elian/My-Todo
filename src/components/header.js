@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
+// for title and theme button
 function Header({ toggleTheme, theme }) {
   return (
     <header className="header">

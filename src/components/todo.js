@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+// todo component and its state
 function Todo({ todo, removeTodo, toggleActive }) {
   const [check, setCheck] = useState(todo.state === "active" ? false : true);
+
   return (
     <div
       className={
