@@ -111,7 +111,7 @@ body {
 }
 
 .item-div.todo-text{
-    padding-top: 2rem;
+    padding: 1rem 0;
     cursor: pointer;
 }
 
@@ -122,6 +122,7 @@ body {
     -ms-border-radius: unset;
     -o-border-radius: unset;
     border-bottom: 1px solid var(--clr-border);
+    height: fit-content;
 }
 
 .item.todo-item:first-child{
@@ -137,6 +138,10 @@ body {
 
 .item-div.todo-text{
     color: var(--clr-todo-text);
+    overflow: hidden;
+    width: 85%;
+    height: fit-content;
+    word-wrap: break-word;
 }
 
 .check .checked{
